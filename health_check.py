@@ -14,6 +14,7 @@ def main():
             r = requests.get(url=url)
             if r.status_code >= HTTPStatus.NOT_FOUND:
                 send_error_case(target_url=url, http_status=r.status_code)
+            print(f'url:{url} http status:{r.status_code}')
         except Exception:
             send_shutdown_case(url)
 
