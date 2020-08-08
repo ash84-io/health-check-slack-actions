@@ -6,5 +6,13 @@ jobs:
   health_check:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+          architecture: x64
+
+      - uses: actions/checkout@v2
       - name: HealthCheck
-        run: echo 'hello'
+        run: |
+          python3 health_check.py
+
