@@ -14,5 +14,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: HealthCheck
         run: |
+          pip3 install requests
           python3 health_check.py
 
