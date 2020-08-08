@@ -1,6 +1,7 @@
+name : health check
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 jobs:
   health_check:
     runs-on: ubuntu-latest
